@@ -1,0 +1,105 @@
+body {
+  background: #f8fafb;
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  position: relative;
+  margin: 20px;
+  height: calc(100vh - 40px);
+}
+
+.collapse {
+  margin-top: 10px;
+  transition: height .5s;
+  height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+}
+
+.collapse.collapsed {
+  border: none;
+}
+
+
+.fadeIn{
+  animation-name: fadeIn;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0.0;
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  60% {
+    transform: scale(0.6);
+  }
+  80% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.fadeOut{
+  animation-name: fadeOut;
+  animation-duration: .2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(.8);
+    opacity: 1;
+  }
+  40% {
+    transform: scale(.6);
+    opacity: 1;
+  }
+  60% {
+    transform: scale(0.4);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+#btnModal {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#btnModal:hover, #btnModal:active {
+  animation-duration: .2s;
+  transition-property: all;
+  transform: scale(1.2);
+}
+
+
+
+
